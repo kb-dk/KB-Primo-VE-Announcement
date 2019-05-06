@@ -9,3 +9,6 @@
    * lables:
        * nui.message.announcement
        * nui.message.dismiss
+       
+       
+ ![Screenshot](announcement.jfif)     
