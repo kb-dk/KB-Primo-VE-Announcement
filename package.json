@@ -4,21 +4,32 @@
   "description": "Displays a message on the top of the screen, every time there is a new text (other than &nbsp;) in the nui.message.announcement code table, if it hasn't already been dismissed by user.",
   "keywords": [
     "announcement",
-    "primo"
+    "primo-explore"
   ],
-  "author": "Royal Danish library",
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "babel-loader": "^8.0.5",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement.git"
   },
-  "directories": {},
+  "author": "Royal Danish library",
   "main": "./dist/js/announcement.js",
+  "devDependencies": {
+    "@babel/core": "7.5.0",
+    "@babel/preset-env": "7.5.0",
+    "angular": "1.6.3",
+    "angular-mocks": "1.6.3",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-istanbul": "^5.1.1",
+    "raw-loader": "^3.1.0",
+    "rimraf": "^2.6.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
   "scripts": {
-    "build": "webpack --mode production",
-    "postbuild": "mkdir -p ./dist/css && cp ./src/announcement.css ./dist/css/ "
+    "build": "webpack --mode=production",
+    "prepare": "rimraf dist/* && npm run build"
+  },
+  "optionalDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-angular": "^4.0.1"
   }
 }
