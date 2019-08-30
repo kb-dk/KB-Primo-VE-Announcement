@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement.git"
   },
   "author": "Royal Danish library",
-  "main": "./dist/js/announcement.js",
+  "main": "./dist/index.js",
   "devDependencies": {
     "@babel/core": "7.5.0",
     "@babel/preset-env": "7.5.0",
@@ -19,13 +19,17 @@
     "angular-mocks": "1.6.3",
     "babel-loader": "^8.0.5",
     "babel-plugin-istanbul": "^5.1.1",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "gulp": "^4.0.2",
     "raw-loader": "^3.1.0",
     "rimraf": "^2.6.3",
+    "vinyl-source-stream": "^2.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },
   "scripts": {
-    "build": "webpack --mode=production",
+    "build": "gulp build",
     "prepare": "rimraf dist/* && npm run build"
   },
   "optionalDependencies": {
