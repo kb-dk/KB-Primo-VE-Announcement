@@ -6,7 +6,8 @@
   },
   "rules": {
     "semi": 2,
-    "no-unused-vars": ["warn"]
+    "no-unused-vars": ["warn"],
+    "no-undef": ["warn"]
   },
   "globals": {
     "__fixtures__": false,
