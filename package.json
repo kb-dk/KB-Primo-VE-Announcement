@@ -1,17 +1,6 @@
 {
-  "name": "primo-ve-announcement",
-  "version": "1.0.0",
-  "description": "Displays a message on the top of the screen, every time there is a new text (other than &nbsp;) in the nui.message.announcement code table, if it hasn't already been dismissed by user.",
-  "keywords": [
-    "announcement",
-    "primo-explore"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement.git"
-  },
   "author": "Royal Danish library",
-  "main": "./dist/index.js",
+  "description": "Displays a message on the top of the screen, every time there is a new text (other than &nbsp;) in the nui.message.announcement code table, if it hasn't already been dismissed by user.",
   "devDependencies": {
     "angular": "1.6.3",
     "angular-mocks": "1.6.3",
@@ -27,12 +16,27 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
+  "engines": {
+    "node": ">=4.2"
+  },
+  "keywords": [
+    "announcement",
+    "primo-explore"
+  ],
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "name": "primo-ve-announcement",
+  "optionalDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-angular": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement.git"
+  },
   "scripts": {
     "build": "gulp build",
     "prepare": "rimraf dist/* && npm run build"
   },
-  "optionalDependencies": {
-    "eslint": "^6.1.0",
-    "eslint-plugin-angular": "^4.0.1"
-  }
+  "version": "1.0.0"
 }

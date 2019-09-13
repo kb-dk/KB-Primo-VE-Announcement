@@ -7,3 +7,14 @@
 # Create the package
 * npm install
 * npm run prepare
+
+# Install in Primo VE
+```bash
+cd MYVIEW
+npm install primo-ve-announcement --save-dev
+```
+
+Add to bottom of `js/main.js`
+```javascript
+require('primo-ve-announcement/dist/index.js');
+```
