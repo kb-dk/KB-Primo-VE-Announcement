@@ -25,7 +25,7 @@
   ],
   "license": "Apache-2.0",
   "main": "dist/index.js",
-  "name": "primo-ve-announcement",
+  "name": "kb-primo-ve-announcement",
   "optionalDependencies": {
     "eslint": "^6.1.0",
     "eslint-plugin-angular": "^4.0.1"
