@@ -11,10 +11,10 @@
 # Install in Primo VE
 ```bash
 cd MYVIEW
-npm install primo-ve-announcement --save-dev
+npm install kb-primo-ve-announcement --save-dev
 ```
 
 Add to bottom of `js/main.js`
 ```javascript
-require('primo-ve-announcement/dist/index.js');
+require('kb-primo-ve-announcement/dist/index.js');
 ```
