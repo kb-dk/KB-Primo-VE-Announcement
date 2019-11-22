@@ -16,5 +16,5 @@ npm install kb-primo-ve-announcement --save-dev
 
 Add to bottom of `js/main.js`
 ```javascript
-require('kb-primo-ve-announcement/dist/index.js');
+require('kb-primo-ve-announcement');
 ```
