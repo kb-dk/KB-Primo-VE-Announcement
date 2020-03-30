@@ -89,9 +89,6 @@ export class AnnouncementService {
     <a class="close" ng-click='$ctrl.close()' aria-label="{{'nui.message.dismiss' | translate}}"
        style="position: absolute; right: 1.5rem; top: 1.5rem;">
         <prm-icon icon-type="svg" svg-icon-set="primo-ui" icon-definition="close">
-            <md-icon ng-if="!$ctrl.isCustom" md-svg-icon="primo-ui:close" alt="" class="md-primoExplore-theme"
-                     aria-hidden="true"></md-icon>
-            <prm-icon-after parent-ctrl="$ctrl"></prm-icon-after>
         </prm-icon>
     </a>
 </md-toast>

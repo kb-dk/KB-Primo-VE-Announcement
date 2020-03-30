@@ -38,5 +38,5 @@
     "build": "gulp build",
     "prepare": "rimraf dist/* && npm run build"
   },
-  "version": "1.0.3"
+  "version": "1.0.4"
 }
