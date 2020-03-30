@@ -23,12 +23,12 @@ export class AnnouncementService {
     this._toastPromise = null;
   };
 
-  /** 
+  /**
    *  Displays the announcement if it has not been dismissed.
-   *  @param {function} [hideCallback] - A function to be called 
+   *  @param {function} [hideCallback] - A function to be called
    *    when the announcement is hidden.
-   *  @return {Promise} A Promise to be fulfilled 
-   *    if the announcement is displayed, and to be 
+   *  @return {Promise} A Promise to be fulfilled
+   *    if the announcement is displayed, and to be
    *    rejected when the announcement cannot be displayed.
    */
   display(hideCallback) {
@@ -80,16 +80,22 @@ export class AnnouncementService {
             }
           },
           controllerAs: '$ctrl',
-          template: `<md-toast class="page-notification" style="top: 0px; position: sticky !important;">
+          template: `
+<md-toast class="page-notification" style="top: 0px; position: sticky !important;">
     <div class="md-toast-content" style="box-shadow:none; width: 100%;">
         <span class='md-toast-text' flex translate='nui.message.announcement'>
   </span>
     </div>
-    <a class="close" ng-click='$ctrl.close()' aria-label="{{'nui.message.dismiss' | translate}}" style="position: absolute; right: 1.5rem; top: 1.5rem;">
-<prm-icon icon-type="svg" svg-icon-set="primo-ui" icon-definition="close"><!----><md-icon ng-if="!$ctrl.isCustom" md-svg-icon="primo-ui:close" alt="" class="md-primoExplore-theme" aria-hidden="true"><svg id="close" width="100%" height="100%" viewBox="0 0 24 24" y="240" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
-        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-    </svg></md-icon><!----><!----><prm-icon-after parent-ctrl="$ctrl"></prm-icon-after></prm-icon></a>
-</md-toast>`,
+    <a class="close" ng-click='$ctrl.close()' aria-label="{{'nui.message.dismiss' | translate}}"
+       style="position: absolute; right: 1.5rem; top: 1.5rem;">
+        <prm-icon icon-type="svg" svg-icon-set="primo-ui" icon-definition="close">
+            <md-icon ng-if="!$ctrl.isCustom" md-svg-icon="primo-ui:close" alt="" class="md-primoExplore-theme"
+                     aria-hidden="true"></md-icon>
+            <prm-icon-after parent-ctrl="$ctrl"></prm-icon-after>
+        </prm-icon>
+    </a>
+</md-toast>
+          `,
         });
 
         ctrl._toastPromise.then(hideCallback).catch(hideCallback).then(() => ctrl._dismiss());
