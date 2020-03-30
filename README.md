@@ -18,3 +18,4 @@ Add to bottom of `js/main.js`
 ```javascript
 require('kb-primo-ve-announcement');
 ```
+Copy the content of `css/custom.css` to your `css/custom.css`
